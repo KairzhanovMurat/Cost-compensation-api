@@ -29,7 +29,7 @@ class Calculator:
     def compensate(self, max_debt: DebtData, min_debt: DebtData) -> CompensationData | None:
         if len(self.temp_debts) <= 1:
             self.temp_debts.clear()
-            return
+            return None
 
         if max_debt.debt_amount == min_debt.debt_amount:
             self.temp_debts.remove(max_debt)
